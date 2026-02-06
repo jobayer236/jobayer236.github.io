@@ -26,15 +26,15 @@ body {
 }
 
 /* ===== Navbar (Modern Glassmorphism) ===== */
+/* Navbar Container */
 header {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 1.2rem 0;
+    background: #ffffff; /* একদম সাদা ব্যাকগ্রাউন্ড */
+    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03); /* খুব হালকা শ্যাডো */
 }
 
 nav {
@@ -43,32 +43,56 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
+/* Logo Style */
 nav h2 {
-    color: var(--primary-color);
+    color: #2563eb; /* Medicare এর মতো নীল কালার */
+    font-size: 1.6rem;
     font-weight: 700;
-    font-size: 1.5rem;
+    letter-spacing: -0.5px;
 }
 
+/* Menu Links */
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 35px; /* মেনুর মাঝে গ্যাপ */
 }
 
 nav ul li a {
-    color: var(--text-light);
+    color: #64748b; /* হালকা গ্রে কালার */
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover & Active State (যেটা সিলেক্ট করবেন সেটা নীল হবে) */
+nav ul li a:hover, 
+nav ul li a.active {
+    color: #2563eb; /* নীল কালার */
+    font-weight: 600;
+}
+
+/* Right Side Blue Button (Book Appointment এর মতো) */
+.nav-btn {
+    background: #2563eb;
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
     transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
-nav ul li a:hover {
-    color: var(--primary-color);
+.nav-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
 }
-
 /* ===== Home Section (Clean Layout) ===== */
 #home {
     display: flex;

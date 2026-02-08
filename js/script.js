@@ -1,16 +1,63 @@
-// নেভিগেশন বারে ক্লিক করলে স্মুথ স্ক্রল তো CSS দিয়েই হচ্ছে, 
-// এখানে আমরা স্ক্রল করলে মেনু হাইলাইট বা ছোট অ্যানিমেশন যোগ করতে পারি।
+console.log("Welcome to Md Jobayer Hossan's Portfolio!");
 
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    if (window.scrollY > 50) {
-        header.style.background = '#1a252f';
-        header.style.padding = '0.5rem 0';
-    } else {
-        header.style.background = '#2c3e50';
-        header.style.padding = '1rem 0';
-    }
+// ১. Navbar active link on scroll
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    // pageYOffset এর বদলে window.scrollY ব্যবহার করা ভালো
+    const scrollPos = window.scrollY;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.clientHeight;
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+        }
+    });
 });
 
-// কনসোলে একটি ওয়েলকাম মেসেজ (ঐচ্ছিক)
-console.log("Welcome to Md Jobayer Hossan's Portfolio!");
+// ২. Articles see more / less
+function toggleArticle(button) {
+    const fullArticle = button.nextElementSibling;
+    if (fullArticle.style.display === "block") {
+        fullArticle.style.display = "none";
+        button.innerText = "See more";
+    } else {
+        fullArticle.style.display = "block";
+        button.innerText = "See less";
+    }
+}
+
+// ৩. Skills Animation (Scroll Triggered)
+const skillsSection = document.getElementById('skills');
+const progressBars = document.querySelectorAll('.animate-bar');
+let animated = false; // যাতে বার-বার এনিমেশন না হয়
+
+function showProgress() {
+    progressBars.forEach(progressBar => {
+        const value = progressBar.dataset.percent;
+        progressBar.style.width = value;
+    });
+}
+
+window.addEventListener('scroll', () => {
+    if (!skillsSection) return; // এরর হ্যান্ডলিং
+
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.2;
+
+    // একবার এনিমেশন হলে animated = true হবে, ফলে মাউস সরালে পার্সেন্টেজ যাবে না
+    if (sectionPos < screenPos && !animated) {
+        showProgress();
+        animated = true; 
+    }
+});

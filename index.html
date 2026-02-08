@@ -20,16 +20,17 @@
 
 <body>
 
-  <!-- ===== Navbar ===== -->
+  <!-- ================================================= Navbar ========================================= -->
   <header>
     <nav>
   <h2>Jobayer</h2>
   <ul>
     <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#gallery">Photos</a></li>
+    <li><a href="#videos">Videos</a></li>
+   <li><a href="#articles">Articles</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-btn">Hire Me</a>
@@ -37,11 +38,12 @@
     
   </header>
 
-  <!-- ===== Home Section ===== -->
+  <!-- =================================================== Home Section ====================================== -->
   <section id="home">
     <div>
-      <h1>Md Jobayer Hossan</h1>
+      <h2>Md Jobayer Hossan</h2>
       <p>CSE Undergraduate | Data Science & Cybersecurity</p>
+      <h3>About Me</h3>
       <p>
         I am a Computer Science and Engineering student passionate about
         data analysis, cybersecurity, and building real-world software projects.
@@ -51,84 +53,291 @@
       <img src="assets/images/profile.png" alt="Md Jobayer Hossan Photo" width="250">
     </div>
   </section>
-
-  <!-- ===== About Section ===== -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am currently studying Computer Science and Engineering.
-      My main interests are Data Science, Cybersecurity, and software development.
-    </p>
-  </section>
-
-  <!-- ===== Skills Section ===== -->
+ <!-- ========================================================= skill Section ================================ -->
   <section id="skills">
-    <h2>Skills</h2>
-    <h3>Professional Skills</h3>
-    <ul>
-      <li>C, C++, Python, Java</li>
-      <li>SQL, Pandas, NumPy</li>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Git & GitHub</li>
-    </ul>
+  <h2 class="section-title">Skills</h2>
 
-    <h3>Soft Skills</h3>
-    <ul>
-      <li>Problem Solving</li>
-      <li>Communication</li>
-      <li>Teamwork</li>
-      <li>Time Management</li>
-    </ul>
-  </section>
+  <div class="skills-container">
+    <div class="skills-column">
+      <h3>Professional Skills</h3>
 
-  <!-- ===== Achievements Section ===== -->
+      <div class="skill-item">
+        <div class="skill-info"><span>HTML & CSS</span><span>75%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="75%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>Python (Pandas, NumPy)</span><span>80%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="80%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>MySQL</span><span>60%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="60%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>Git & GitHub</span><span>73%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="73%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>VS Code</span><span>90%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="90%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>C++</span><span>95%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="95%"></span></div>
+      </div>
+
+
+    </div>
+
+
+
+
+    <div class="skills-column">
+      <h3>Soft Skills</h3>
+      <div class="skill-item">
+        <div class="skill-info"><span>Communication</span><span>85%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="85%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>Problem Solving</span><span>80%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="80%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>Teamwork & Collaboration</span><span>90%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="90%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>Self-Motivated</span><span>95%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="95%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>Fast Learner</span><span>80%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="85%"></span></div>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-info"><span>Critical Thinking</span><span>78%</span></div>
+        <div class="progress-line"><span class="animate-bar" data-percent="78%"></span></div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ===== ================================================Achievements Section ============================= -->
   <section id="achievements">
-    <h2>Achievements & Certifications</h2>
-    <div>
-      <img src="assets/images/certificate1.jpg" alt="Certificate 1" width="200">
-      <p>Python Programming Certificate</p>
-    </div>
-    <div>
-      <img src="assets/images/certificate2.jpg" alt="Certificate 2" width="200">
-      <p>Data Analysis Certificate</p>
-    </div>
-  </section>
+  <h2 style="grid-column: 1 / -1; text-align: center;">Achievements & Certifications</h2> 
+  
+  <div>
+    <img src="assets/images/certificate1.png" alt="Cert 1">
+    <p>Python Programming Certificate</p>
+  </div>
+  
+  <div>
+    <img src="assets/images/certificate2.png" alt="Cert 2">
+    <p>Data Analysis Certificate</p>
+  </div>
 
-  <!-- ===== Gallery Section ===== -->
+  <div>
+    <img src="assets/images/certificate3.png" alt="Cert 3">
+    <p>Cybersecurity Basics</p>
+  </div>
+
+  <div>
+    <img src="assets/images/certificate4.png" alt="Cert 4">
+    <p>Web Development</p>
+  </div>
+
+  <div>
+    <img src="assets/images/certificate5.png" alt="Cert 4">
+    <p>Web Development</p>
+  </div>
+
+  <div>
+    <img src="assets/images/certificate6.png" alt="Cert 4">
+    <p>Web Development</p>
+  </div>
+
+  <div>
+    <img src="assets/images/certificate7.png" alt="Cert 4">
+    <p>Web Development</p>
+  </div>
+
+  <div>
+    <img src="assets/images/" alt="Cert 4">
+    <p>Web Development</p>
+  </div>
+
+  
+</section>
+
+
+  <!-- ====]=========================================== Gallery/Photo Section ============================== -->
   <section id="gallery">
-    <h2>Gallery</h2>
-    <div>
-      <img src="assets/images/gallery1.jpg" alt="Gallery Image 1" width="200">
-    </div>
-    <div>
-      <img src="assets/images/gallery2.jpg" alt="Gallery Image 2" width="200">
-    </div>
-  </section>
+  <h2 style="grid-column: 1 / -1; text-align: center;">Photos</h2>
+  
+  <div><img src="assets/images/all class mate in town school mat.jpg" alt="Gallery 1"></div>
+  <div><img src="assets/images/sylhet a.jpg" alt="Gallery 2"></div>
+  <div><img src="assets/images/nijum deep.jpg" alt="Gallery 3"></div>
+  <div><img src="assets/images/nijum deep 2.jpg" alt="Gallery 4"></div>
+  <div><img src="assets/images/friend ra sobai nodir par.jpg" alt="Gallery 2"></div>
+  <div><img src="assets/images/cox bazar.jpg" alt="Gallery 3"></div>
+  <div><img src="assets/images/cor a friend ra sobai.jpg" alt="Gallery 4"></div>
+</section>
+<!-- ========================================================= Video Section ================================= -->
+  <section id="videos">
+  <h2 style="grid-column: 1 / -1; text-align: center;">Featured Videos</h2>
+  
+  
+  <!-- =====embed link for iformate===== -->
+  <div>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/MGyygiXMzRk" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    <p>The Right Thing To Do</p>
+  </div>
+  
+  <div>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/EFmxPMdBqmU" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    <p>Animation vs. Coding</p>
+  </div>
 
-  <!-- ===== Contact Section ===== -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>
-      🔗 LinkedIn:
-      <a href="https://linkedin.com/in/jobayer236" target="_blank">
-        linkedin.com/in/jobayer236
-      </a>
-    </p>
-    <p>
-      🔗 GitHub:
-      <a href="https://github.com/jobayer236" target="_blank">
-        github.com/jobayer236
-      </a>
-    </p>
-    <p>
-      🔗 Facebook:
-      <a href="https://facebook.com/jobayer236" target="_blank">
-        facebook.com/jobayer236
-      </a>
-    </p>
-  </section>
+  <div>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/6Af6b_wyiwI" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    <p>Tech Talk</p>
+  </div>
+  <div>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/ErMSHiQRnc8" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    <p>Animation vs. physics</p>
+  </div>
+  <div>
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/-9bo8HlSxwQ" frameborder="0" allowfullscreen style="border-radius: 15px;"></iframe>
+    <p>CS50x 2026 - Artificial Intelligence</p>
+  </div>
+</section>
 
-  <!-- ===== Footer ===== -->
+  
+
+<!-- ========================================================== Articles Section ============================ -->
+   
+  <section id="articles" class="articles">
+  <h2>Articles</h2>
+
+  <div class="articles-grid">
+
+
+
+
+    <div class="article-card">
+      <h3>Getting Started with Data Science</h3>
+      <p>
+        Data Science hocche data theke insight ber korar process.
+        Eta statistics, programming ar domain knowledge er mix...
+      </p>
+      <button onclick="toggleArticle(this)">See more</button>
+
+      <div class="full-article">
+        <p>
+          Data Science hocche data collect, clean, analyze ar
+          visualization er maddhome decision newa. Python, Pandas,
+          NumPy, Machine Learning egulo important part.
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="article-card">
+      <h3>Basics of Cybersecurity</h3>
+      <p>
+        Cybersecurity amader digital data ke protection kore
+        hackers ar attacks theke...
+      </p>
+      <button onclick="toggleArticle(this)">See more</button>
+
+      <div class="full-article">
+        <p>
+          Cybersecurity er main goal hocche confidentiality,
+          integrity ar availability maintain kora. Network
+          security, cryptography egulo core topic.
+        </p>
+      </div>
+    </div>
+
+
+
+
+    
+    <div class="article-card">
+      <h3>Basics of Cybersecurity</h3>
+      <p>
+        Cybersecurity amader digital data ke protection kore
+        hackers ar attacks theke...
+      </p>
+      <button onclick="toggleArticle(this)">See more</button>
+
+      <div class="full-article">
+        <p>
+          Cybersecurity er main goal hocche confidentiality,
+          integrity ar availability maintain kora. Network
+          security, cryptography egulo core topic.
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+</section>
+
+
+
+<!-- ====================================================== Contact Section ================================= -->
+   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<section id="contact">
+  <center><h2>Contact Me</h2></center>
+  
+  <div class="social-icons">
+  <a href="https://linkedin.com/in/jobayer236" target="_blank" class="icon-box linkedin">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+
+  <a href="https://github.com/jobayer236" target="_blank" class="icon-box github">
+    <i class="fab fa-github"></i>
+  </a>
+
+  <a href="https://facebook.com/jobayer236" target="_blank" class="icon-box facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+   <!-- Gmail icon -->
+  <a href="https://mail.google.com/mail/?view=cm&to=jobayer236@gmail.com" target="_blank" class="icon-box gmail">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <!-- CV Icon -->
+  <a href="assets/cv/JobayerHossan_CV.pdf.pdf" target="_blank" class="icon-box cv">
+    <i class="fas fa-file-pdf"></i>
+  </a>
+
+</div>
+
+</section>
+  <!-- ============================================================= Footer ================================== -->
   <footer>
     <p>© 2026 Md Jobayer Hossan. All rights reserved.</p>
   </footer>

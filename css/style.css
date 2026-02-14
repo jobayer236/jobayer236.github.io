@@ -367,7 +367,7 @@ section h2::after {
 
 
 
-/* ===== Contact Section (Buttons Like Image) ===== */
+/* ================================================ Contact Section (Buttons Like Image) =========================== */
 
 
 .articles {
@@ -497,8 +497,45 @@ section h2::after {
   grid-template-columns: repeat(3, 1fr); /* Or whatever your grid setup is */
 }
 
+.email-text {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: #444;
+  user-select: none; /* "For Gmail:" select না হবে */
+}
 
-/* Footer */
+#email {
+  user-select: text;          /* শুধু email select হবে */
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  font-weight: 600;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Selection color */
+#email::selection {
+  background: #87CEEB;
+  color: #000;
+}
+
+#email::-moz-selection {
+  background: #87CEEB;
+  color: #000;
+}
+
+#email::-webkit-selection {
+  background: #87CEEB;
+  color: #000;
+}
+
+
+/*---------------------------- Footer --------------------------------------------------------------------------------*/
 footer {
     padding: 40px;
     text-align: center;

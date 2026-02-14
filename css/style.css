@@ -489,6 +489,7 @@ section h2::after {
 .gmail:hover { background-color: #D44638; }   /* Gmail red */
 .cv:hover { background-color: #FF4B2B; }     /* CV PDF orange/red */
 .instagram:hover { background-color: #E1306C; }
+.x:hover {  background-color: #000000; }   /* X official black */
 
 
 .parent-container {

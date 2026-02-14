@@ -497,6 +497,24 @@ section h2::after {
   grid-template-columns: repeat(3, 1fr); /* Or whatever your grid setup is */
 }
 
+
+
+/* Email text style */
+.email-text {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.email-text span:first-child {
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+
+
+
+
 .email-text {
   margin-top: 25px;
   text-align: center;

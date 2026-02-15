@@ -138,7 +138,7 @@ nav ul li a.active {
 }
 
 .btn {
-    margin-bottom: 25px;
+    
   display: inline-block;
   padding: 10px 25px;
   background: #2563eb;
@@ -146,6 +146,7 @@ nav ul li a.active {
   border-radius: 25px;
   text-decoration: none;
   transition: 0.3s ease;
+  margin-bottom: 30px;
 }
 
 .btn:hover {

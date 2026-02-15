@@ -278,7 +278,7 @@ nav ul li a.active {
 
 
 
-/* ===== Common Section Styling ===== */
+/* ==================================================== Common Section Styling ===== */
 section {
     
     padding: 100px 20px;
@@ -314,7 +314,7 @@ section h2::after {
 
 
 
-/* ===== Skills & Grid Cards ===== */
+/* =================================================================== Skills & Grid Cards =========================== */
 .section-title {
     text-align: center;
     color: #000106;

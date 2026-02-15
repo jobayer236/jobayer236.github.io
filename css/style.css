@@ -273,9 +273,6 @@ nav ul li a.active {
   transition: 0.4s ease;
 }
 
-.social-icons a:hover i {
-  transform: rotate(360deg);
-}
 
 
 

@@ -176,6 +176,17 @@ nav h2 {
     letter-spacing: -0.5px;
 }
 
+
+
+
+nav h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
 /* Menu Links */
 nav ul {
     display: flex;

@@ -61,3 +61,27 @@ window.addEventListener('scroll', () => {
         animated = true; 
     }
 });
+
+
+
+
+<script>
+  const skillsSection = document.getElementById('skills');
+  const progressBars = document.querySelectorAll('.animate-bar');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // সেকশনে আসলে প্রতিটি বারের width সেট করবে
+        progressBars.forEach(bar => {
+          const percentage = bar.getAttribute('data-percent');
+          bar.style.width = percentage;
+        });
+        // একবার এনিমেশন হয়ে গেলে অবজার্ভ করা বন্ধ করে দিবে (অপশনাল)
+        observer.unobserve(skillsSection);
+      }
+    });
+  }, { threshold: 0.3 }); // সেকশন ৩০% দেখা গেলে কাজ শুরু করবে
+
+  observer.observe(skillsSection);
+</script>

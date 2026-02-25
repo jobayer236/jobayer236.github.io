@@ -325,26 +325,49 @@ section h2::after {
 
 
 /* =================================================================== Skills & Grid Cards =========================== */
+#skills {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* হালকা ব্যাকগ্রাউন্ড */
+}
+
 .section-title {
     text-align: center;
     color: #000106;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    text-decoration: none; /* আন্ডারলাইন বাদ */
 }
 
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    max-width: 1000px;
+    gap: 50px;
+    max-width: 1100px;
     margin: 0 auto;
+}
+
+.skills-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: 700;
+}
+
+.skill-item {
+    margin-bottom: 25px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
 }
 
 .progress-line {
     height: 10px;
     width: 100%;
-    background: #f0f0f0;
+    background: #e0e0e0; /* খালি অংশের রঙ */
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -352,27 +375,44 @@ section h2::after {
 
 .progress-line span {
     height: 100%;
+    background: #4466ff; /* আপনার নীল রঙ */
+    position: absolute;
+    left: 0;
+    border-radius: 10px;
+    
+    /* এনিমেশন লজিক */
+    transform-origin: left;
+    animation: animateBar 2s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+/* বার এনিমেশন কি-ফ্রেম */
+@keyframes animateBar {
+    0% {
+        transform: scaleX(0); /* শুরুতে শূন্য */
+    }
+    100% {
+        transform: scaleX(1); /* শেষে পূর্ণ (অর্থাৎ স্টাইলে দেওয়া % পর্যন্ত) */
+    }
+}
+
+
+
+.progress-line span {
+    height: 100%;
     background: #4466ff;
     width: 0; /* শুরুতে ০ থাকবে */
     position: absolute;
     left: 0;
-    transition: width 2s cubic-bezier(0.1, 0, 0.2, 1); /* স্মুথ এনিমেশন */
+    border-radius: 10px;
+    transition: width 1.5s cubic-bezier(0.1, 0, 0.2, 1); /* স্মুথ এনিমেশন */
 }
 
-.skill-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-.skills-column h3 {
-    font-size: 1.5rem;
-    margin-bottom: 30px; /* এই মানটি বাড়ালে গ্যাপ বাড়বে */
-    color: #333;
-    font-weight: 700;
+/* Jokhon JavaScript diye 'show' class jog kora hobe tokhon-e animation hobe */
+.progress-line span.show {
+    /* width value ta JS theke ashbe */
 }
 
-/* ===== Achievements & Gallery ===== */
+/* =========================================== Achievements & Gallery ================== */
 /* Achievements & Gallery common base */
 #achievements {
     text-align: center;

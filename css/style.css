@@ -29,11 +29,90 @@ body {
   color: white;
 }
 
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+header {
+  background-color: #ffffff;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+}
+
+nav h2 a {
+  text-decoration: none;
+  color: #2563eb;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+nav ul li a {
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.nav-btn {
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ================= HOME SECTION ================= */
 #home {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 40px 10%;
+  padding: 100px 10% 60px; /* navbar height fix */
 }
 
 .home-container {
@@ -48,206 +127,9 @@ body {
   flex: 1;
 }
 
-.home-text h1 {
-  font-size: 48px;
-}
-
-.home-text span {
-  color: #38bdf8;
-}
-
-.home-text h2 {
-  margin: 10px 0;
-  font-weight: 400;
-  color: #94a3b8;
-}
-
-.home-text p {
-  margin: 20px 0;
-  line-height: 1.6;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background: #38bdf8;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.home-image {
-  flex: 1;
-  text-align: center;
-}
-
-.home-image img {
-  max-width: 350px;
-  width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* ✅ Responsive Part */
-@media (max-width: 768px) {
-
-  #home {
-    padding: 20px;
-  }
-
-  .home-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .home-text h1 {
-    font-size: 28px;
-  }
-
-  .home-text h2 {
-    font-size: 18px;
-  }
-
-  .home-text p {
-    font-size: 14px;
-  }
-
-  .home-image img {
-    max-width: 220px;
-    margin-top: 20px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-/*  -------------------------------------------------------------------------------------------*/
-
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    line-height: 1.6;
-}
-
-/* ===== Navbar (Modern Glassmorphism) ===== */
-/* Navbar Container */
-header {
-    background-color: #ffffff !important; /* Forcefully white rakhar jonno !important add kora hoyeche */
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Shadow-ta ektu sposto kora hoyeche */
-    transition: background-color 0.3s ease; /* Jate transition smooth hoy */
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 40px;
-}
-
-/* Logo Style */
-nav h2 {
-    color: #2563eb; /* Medicare এর মতো নীল কালার */
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-
-
-
-nav h2 a {
-  text-decoration: none;
-  color: inherit;
-}
-
-
-
-
-/* Menu Links */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 35px; /* মেনুর মাঝে গ্যাপ */
-}
-
-nav ul li a {
-    color: #64748b; /* হালকা গ্রে কালার */
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-}
-
-/* Hover & Active State (যেটা সিলেক্ট করবেন সেটা নীল হবে) */
-nav ul li a:hover, 
-nav ul li a.active {
-    color: #2563eb; /* নীল কালার */
-    font-weight: 600;
-}
-
-/* Right Side Blue Button (Book Appointment এর মতো) */
-.nav-btn {
-    background: #2563eb;
-    color: #ffffff !important;
-    padding: 10px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: 0.3s;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-}
-
-.nav-btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-2px);
-}
-/* ===== Home Section (Clean Layout) ===== */
-#home {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: #f5f7fa;
-  padding: 50px 10%;
-}
-
-.home-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
 .home-text h4 {
-  margin-top: 40px;
-  font-size: 20px;
-  margin-bottom: 0px;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
 .home-text h1 {
@@ -260,9 +142,10 @@ nav ul li a.active {
 }
 
 .home-text h2 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
   margin-bottom: 15px;
+  color: #555;
 }
 
 .home-text p {
@@ -271,8 +154,8 @@ nav ul li a.active {
   color: #555;
 }
 
+/* ================= BUTTON ================= */
 .btn {
-    
   display: inline-block;
   padding: 10px 25px;
   background: #2563eb;
@@ -287,130 +170,119 @@ nav ul li a.active {
   background: #1e40af;
 }
 
-/* Blob Image Design */
+/* ================= IMAGE SECTION ================= */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
 .home-image .blob {
   width: 350px;
   height: 350px;
-  background: #2563eb;
-  border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%;
+  background-color: #7d5fff; 
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   display: flex;
-  align-items: center;
+  align-items: flex-end; 
   justify-content: center;
+  position: relative;
+  transition: all 0.5s ease;
+  
+  /* মেইন পরিবর্তন এখানে: এটি ছবির নিচের বাড়তি অংশ কেটে ফেলবে */
+  overflow: hidden; 
 }
 
 .home-image img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-
-/* Responsive */
-@media (max-width: 900px) {
-  .home-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .home-image {
-    width: 320px;
-    height: 320px;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-.home-image img {
-  width: 100%;
+  /* পরিবর্তন ২: ছবিকে ব্লব এর সমান বা একটু ছোট রাখুন */
+  width: 100%; 
   height: 100%;
   object-fit: cover;
-  object-position: center top; /* important */
+  border-radius: 0; 
+  
+  /* পজিশন ঠিক করার জন্য */
+  transform: translateY(20px); 
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
 }
 
-  .home-image .blob {
-  background: #2563eb;
+.home-image .blob:hover {
+  border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
 }
-
-}
-
-
-
-
-
-
-
-.home-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top; /* important */
-}
-
-
-
-
-
-.social-icons a:nth-child(1):hover {
-  background-color: #0077b5; /* LinkedIn */
-}
-
-.social-icons a:nth-child(2):hover {
-  background-color: #24292e; /* GitHub */
-}
-
-.social-icons a:nth-child(3):hover {
-  background-color: #1877f2; /* Facebook */
+/* ================= SOCIAL ICONS ================= */
+.social-icons {
+  margin-top: 15px;
 }
 
 .social-icons a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
-  margin: 0 10px;
+  width: 45px;
+  height: 45px;
+  margin: 0 8px;
   border-radius: 50%;
   background: #111;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
-  transition: all 0.4s ease;
-  box-shadow: 0 0 0 transparent;
+  transition: 0.4s ease;
 }
 
-/* Hover main animation */
 .social-icons a:hover {
   transform: translateY(-6px) scale(1.1);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
-/* LinkedIn */
+
+/* Individual Hover Colors */
 .social-icons a:nth-child(1):hover {
   background: #0077b5;
   box-shadow: 0 0 20px #0077b5;
 }
 
-/* GitHub */
 .social-icons a:nth-child(2):hover {
   background: #24292e;
   box-shadow: 0 0 20px #24292e;
 }
 
-/* Facebook */
 .social-icons a:nth-child(3):hover {
   background: #1877f2;
   box-shadow: 0 0 20px #1877f2;
 }
 
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
 
-.social-icons a i {
-  transition: 0.4s ease;
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text h1 {
+    font-size: 30px;
+  }
+
+  .home-text h2 {
+    font-size: 18px;
+  }
+
+  .home-text p {
+    font-size: 14px;
+  }
+
+  .home-image .blob {
+    width: 260px;
+    height: 260px;
+  }
+
+  .home-image img {
+    width: 230px;
+    height: 230px;
+  }
+
 }
-
-
-
 /*  ------------------------------------try to fix mobile pic -------------------------------------------------------*/
 
+/* HOME IMAGE MODERN STYLE */
 
 
 
@@ -839,20 +711,158 @@ section h2::after {
 
 
 /*---------------------------- Footer --------------------------------------------------------------------------------*/
-footer {
-    padding: 40px;
-    text-align: center;
-    background: var(--white);
-    border-top: 1px solid #eee;
-    color: var(--text-light);
+/* ================= MODERN FOOTER ================= */
+
+/* ===== Modern Compact Footer ===== */
+
+.footer {
+  background: #000;
+  color: #bbb;
+  position: relative;
+  padding: 60px 8% 20px;
+  overflow: hidden;
 }
 
-/* Mobile Responsive */
+/* Wave Top */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #000;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+}
+
+/* Layout */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Headings */
+.footer h2 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.footer h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Links */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+}
+
+.footer ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #4f46e5;
+  padding-left: 4px;
+}
+
+/* Text */
+.footer p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #222;
+  margin-top: 25px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    #home {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    #home h1 { font-size: 2.5rem; }
-    nav ul { display: none; } /* Mobile menu simplified */
+  .footer-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+
+
+
+
+
+/* মেইন কন্টেইনার */
+.footer-social-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.follow-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+/* কমন আইকন স্টাইল */
+.footer-social-icons a {
+  color: #fff; /* শুরুতে সব সাদা থাকবে */
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+/* মাউস নিলে আলাদা আলাদা কালার হবে */
+
+/* YouTube - Red */
+.footer-social-icons a:hover .fa-youtube {
+  color: #FF0000;
+  transform: scale(1.2);
+}
+
+/* Facebook - Blue */
+.footer-social-icons a:hover .fa-facebook-f {
+  color: #1877F2;
+  transform: scale(1.2);
+}
+
+/* Twitter (X) - Sky Blue or Black */
+.footer-social-icons a:hover .fa-twitter {
+  color: #1DA1F2;
+  transform: scale(1.2);
+}
+
+/* LinkedIn - Dark Blue */
+.footer-social-icons a:hover .fa-linkedin-in {
+  color: #0077B5;
+  transform: scale(1.2);
+}
+
+/* Instagram - Pink/Gradient mood */
+.footer-social-icons a:hover .fa-instagram {
+  color: #E4405F;
+  transform: scale(1.2);
 }
